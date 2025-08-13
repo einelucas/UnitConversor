@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/unit-conversor/style.css" />
+    <script defer src="/unit-conversor/script.js"></script>
+    <title>Unit Conversor</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Conversor de unidadades de medida</h1>
+      <form class="converter-form" id="converter-form">
+        <div class="currency-row">
+          <div class="currency-input">
+            <label for="amount">Valor</label>
+            <input
+              type="number"
+              id="amount"
+              placeholder="Digite o valor"
+              step="1"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="currency-select">
+            <label for="fromCurrency">De</label>
+            <select id="fromCurrency" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="px">Pixels (px)</option>
+              <option value="rem">Root em (rem)</option>
+              <option value="cm">Centímetros (cm)</option>
+              <option value="mm">Milímetros (mm)</option>
+              <option value="Q">Quarter-millimiter (Q)</option>
+              <option value="in">Inch (in)</option>
+              <option value="pc">Pica (pc)</option>
+              <option value="pt">Ponto tipografico (pt)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="currency-row">
+          <div class="currency-input">
+            <label for="convertedAmount">Resultado</label>
+            <input
+              type="text"
+              readonly
+              id="convertedAmount"
+              placeholder="Valor convertido"
+            />
+          </div>
+
+          <div class="currency-select">
+            <label for="toCurrency">De</label>
+            <select id="toCurrency" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="px">Pixels (px)</option>
+              <option value="rem">Root em (rem)</option>
+              <option value="cm">Centímetros (cm)</option>
+              <option value="mm">Milímetros (mm)</option>
+              <option value="Q">Quarter-millimiter (Q)</option>
+              <option value="in">Inch (in)</option>
+              <option value="pc">Pica (pc)</option>
+              <option value="pt">Ponto tipografico (pt)</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="converter-btn" id="converterBtn">
+          Converter
+        </button>
+      </form>
+      <div class="result"></div>
+    </div>
+  </body>
+</html>
